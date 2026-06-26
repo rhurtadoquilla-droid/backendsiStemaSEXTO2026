@@ -1,3 +1,2 @@
 ### consulta de usuario
-
-GET http://sitemadeinvetario/
+GET http://sitemainventario6to/users

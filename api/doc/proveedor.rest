@@ -1,0 +1,2 @@
+### consulta de proveedores
+GET http://sitemainventario6to/proveedores

@@ -1,0 +1,2 @@
+### consulta de ubicaciones
+GET http://sitemainventario6to/ubicaciones

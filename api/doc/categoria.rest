@@ -1,0 +1,2 @@
+### consulta de categorias
+GET http://sitemainventario6to/categorias

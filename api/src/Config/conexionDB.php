@@ -48,5 +48,22 @@ class ConexionPDO
         }
 
     }
+    // funcion para ejecutar transacciones updates o add
+    public static function execute(string $sql, array $param=[]): array
+    {
 
-}
+        try{
+
+            $stmt = self::connect()->prepare($sql);
+            $stmt->execute($param);
+
+            return ["ok" => "Transaccion ejecutada correctamente"];
+
+        }catch(Exception $e){
+
+            return ["ERROR"=>$e->getMessage()];
+
+        }
+
+    }  
+} 

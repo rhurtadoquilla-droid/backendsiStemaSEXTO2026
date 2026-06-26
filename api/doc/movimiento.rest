@@ -1,0 +1,2 @@
+### consulta de movimientos
+GET http://sitemainventario6to/movimientos
