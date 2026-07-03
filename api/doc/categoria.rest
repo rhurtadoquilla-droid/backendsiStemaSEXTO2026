@@ -1,2 +1,2 @@
 ### consulta de categorias
-GET http://sitemainventario6to/categorias
+GET http://api.sistemainventario/categorias

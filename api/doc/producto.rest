@@ -10,7 +10,18 @@ PUT http://sitemainventario6to/productos/1
     "descripcion":"computadora de escritorio",
     "stock_actual":200,
     "stock_minimo":13,
-    "precio_costo":20.00
+    "precio_costo":20.00,
+    "cod_categoria":2,
+    "cod_ubicacion":3
+}
+
+### Modificar producto con datos faltantes
+PUT http://sitemainventario6to/productos/1
+
+{
+    "codbarras":"",
+    "nombre":"computadora ",
+    "stock_actual":200
 }
 ### Adicionar producto
 POST http://sitemainventario6to/productos/
@@ -25,3 +36,16 @@ POST http://sitemainventario6to/productos/
     "cod_categoria":2,
     "cod_ubicacion":3
 }
+
+### Adicionar producto con datos faltantes
+POST http://sitemainventario6to/productos/
+
+{
+    "codbarras":"",
+    "nombre":"silla ",
+    "stock_actual":20,
+    "precio_costo":25.00
+}
+
+### Eliminar producto
+DELETE http://sitemainventario6to/productos/14

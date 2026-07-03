@@ -14,27 +14,27 @@ class ProductoController
     public function update($id)
     {
         $jsonData = file_get_contents('php://input');
-        // die($jsonData);
         $data = json_decode($jsonData, true);
 
         if (json_last_error() != JSON_ERROR_NONE) {
             echo json_encode([
-
                 "status" => "error conversion",
                 "message" => json_last_error_msg(),
             ]);
             return;
         }
 
-        // Validar que el campo codBarras no esté vacío
-        if (!isset($data['codbarras']) || trim($data['codbarras']) == "") {
+        $producto = productos::update($id, $data);
+
+        if (isset($producto["ERROR"])) {
             echo json_encode([
-                "status" => "error",
-                "message" => "El campo codbarras es obligatorio"
+                "estado" => "false",
+                "message" => $producto["ERROR"],
+                "campos" => $producto["campos"] ?? []
             ]);
             return;
         }
-        $producto = productos::update($id, $data);
+
         if ($producto) {
             echo json_encode([
                 "estado" => "true",
@@ -42,33 +42,35 @@ class ProductoController
             ]);
             return;
         }
+
         echo json_encode($producto);
     }
 
-
-    // "nombre":"computadora ",
-
-    //"descripcion":"computadora de escritorio",
-
-
-
-    //"stock_Actual":150,
-
-    //"stock_Minimo":10,
-
-    //"precio_Costo":20.00
-
-    
     // Adicionar producto
     public function add()
     {
         $jsonData = file_get_contents('php://input');
         $data = json_decode($jsonData, true);
 
-        
+        if (json_last_error() != JSON_ERROR_NONE) {
+            echo json_encode([
+                "status" => "error conversion",
+                "message" => json_last_error_msg(),
+            ]);
+            return;
+        }
 
-        //VALIDACION DE CAMPOS OBLIGATORIOS
         $producto = productos::add($data);
+
+        if (isset($producto["ERROR"])) {
+            echo json_encode([
+                "estado" => "false",
+                "message" => $producto["ERROR"],
+                "campos" => $producto["campos"] ?? []
+            ]);
+            return;
+        }
+
         if ($producto) {
             echo json_encode([
                 "estado" => "true",
@@ -78,5 +80,24 @@ class ProductoController
             return;
         }
     }
-      
+
+    // Eliminar producto
+    public function delete($id)
+    {
+        $producto = productos::delete($id);
+
+        if (isset($producto["ERROR"])) {
+            echo json_encode([
+                "estado" => "false",
+                "message" => "No se pudo eliminar el producto",
+                "error" => $producto["ERROR"]
+            ]);
+            return;
+        }
+
+        echo json_encode([
+            "estado" => "true",
+            "message" => "Producto eliminado correctamente"
+        ]);
+    }
 }
