@@ -1,0 +1,288 @@
+<div class="min-h-screen bg-slate-100 font-sans text-slate-900">
+    <aside class="fixed inset-y-0 left-0 z-30 hidden w-72 flex-col bg-[#1E3A8A] text-white shadow-2xl lg:flex">
+        <div class="flex h-20 items-center gap-3 border-b border-white/10 px-6">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#3B82F6] shadow-lg shadow-blue-950/30">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M4 7.5 12 3l8 4.5-8 4.5L4 7.5Z" />
+                    <path d="M4 12.5 12 17l8-4.5" />
+                    <path d="M4 17.5 12 22l8-4.5" />
+                </svg>
+            </div>
+            <div>
+                <p class="text-lg font-semibold tracking-wide">Inventario Pro</p>
+                <p class="text-xs font-medium text-blue-100">Control de almacen</p>
+            </div>
+        </div>
+
+        <nav class="flex-1 space-y-1 px-4 py-6">
+            <a href="#" data-view="home" class="flex items-center gap-3 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-[#1E3A8A] shadow-lg shadow-blue-950/10 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11.5 12 4l9 7.5" /><path d="M5 10.5V20h14v-9.5" /><path d="M9 20v-6h6v6" /></svg>
+                Dashboard
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-blue-100 transition duration-200 hover:bg-white/10 hover:text-white">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" /></svg>
+                Productos
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-blue-100 transition duration-200 hover:bg-white/10 hover:text-white">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /><path d="M8 5v14" /></svg>
+                Categorias
+            </a>
+            <a href="#" data-view="users" class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-blue-100 transition duration-200 hover:bg-white/10 hover:text-white">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                Usuarios
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-blue-100 transition duration-200 hover:bg-white/10 hover:text-white">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M4 21h16" /></svg>
+                Entradas
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-blue-100 transition duration-200 hover:bg-white/10 hover:text-white">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21V9" /><path d="m17 14-5-5-5 5" /><path d="M4 3h16" /></svg>
+                Salidas
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-blue-100 transition duration-200 hover:bg-white/10 hover:text-white">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5" /><path d="M8 17V9" /><path d="M12 17V7" /><path d="M16 17v-5" /><path d="M20 19H4" /></svg>
+                Reportes
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-blue-100 transition duration-200 hover:bg-white/10 hover:text-white">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5Z" /><path d="M19.4 15a1.8 1.8 0 0 0 .36 1.98l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.8 1.8 0 0 0-1.98-.36 1.8 1.8 0 0 0-1.1 1.65V21a2 2 0 1 1-4 0v-.09A1.8 1.8 0 0 0 8.8 19.3a1.8 1.8 0 0 0-1.98.36l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.8 1.8 0 0 0 4.35 15a1.8 1.8 0 0 0-1.65-1.1H2.6a2 2 0 1 1 0-4h.09A1.8 1.8 0 0 0 4.35 8.8a1.8 1.8 0 0 0-.36-1.98l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.8 1.8 0 0 0 8.8 4.35a1.8 1.8 0 0 0 1.1-1.65V2.6a2 2 0 1 1 4 0v.09A1.8 1.8 0 0 0 15 4.35a1.8 1.8 0 0 0 1.98-.36l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.8 1.8 0 0 0 19.4 8.8a1.8 1.8 0 0 0 1.65 1.1h.09a2 2 0 1 1 0 4h-.09A1.8 1.8 0 0 0 19.4 15Z" /></svg>
+                Configuracion
+            </a>
+        </nav>
+    </aside>
+
+    <main class="lg:pl-72">
+        <header class="sticky top-0 z-20 border-b border-slate-200 bg-white/95 px-4 py-4 shadow-sm backdrop-blur md:px-8">
+            <div class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#3B82F6]">Sistema de almacenamiento</p>
+                    <h1 class="mt-1 text-2xl font-bold text-[#1E3A8A] md:text-3xl">Panel de Inventario</h1>
+                </div>
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                    <label class="relative block sm:w-80">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+                        </span>
+                        <input class="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 pl-12 pr-4 text-sm outline-none transition duration-200 placeholder:text-slate-400 focus:border-[#3B82F6] focus:bg-white focus:ring-4 focus:ring-blue-100" type="search" placeholder="Buscar producto, SKU o movimiento">
+                    </label>
+                    <button class="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-600 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#3B82F6] hover:text-[#1E3A8A] hover:shadow-md" aria-label="Notificaciones">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                        <span class="absolute right-3 top-3 h-2.5 w-2.5 rounded-full bg-red-500 ring-2 ring-white"></span>
+                    </button>
+                    <button class="flex h-12 items-center gap-3 rounded-2xl border border-slate-200 bg-white px-3 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#3B82F6] hover:shadow-md">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-[#1E3A8A] text-sm font-bold text-white">AR</span>
+                        <span class="hidden text-left sm:block">
+                            <span class="block text-sm font-semibold text-slate-800">Admin Root</span>
+                            <span class="block text-xs text-slate-500">Gerente de almacen</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <nav class="mt-4 flex gap-2 overflow-x-auto pb-1 lg:hidden">
+                <a href="#" data-view="home" class="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#1E3A8A] px-4 py-2 text-sm font-semibold text-white shadow-sm">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11.5 12 4l9 7.5" /><path d="M5 10.5V20h14v-9.5" /></svg>
+                    Dashboard
+                </a>
+                <a href="#" class="inline-flex shrink-0 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /></svg>
+                    Productos
+                </a>
+                <a href="#" class="inline-flex shrink-0 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm">Categorias</a>
+                <a href="#" data-view="users" class="inline-flex shrink-0 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm">Usuarios</a>
+                <a href="#" class="inline-flex shrink-0 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm">Entradas</a>
+                <a href="#" class="inline-flex shrink-0 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm">Salidas</a>
+                <a href="#" class="inline-flex shrink-0 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm">Reportes</a>
+                <a href="#" class="inline-flex shrink-0 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm">Configuracion</a>
+            </nav>
+        </header>
+
+        <section class="space-y-6 px-4 py-6 md:px-8">
+            <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                <article class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Total de Productos</p>
+                            <p class="mt-3 text-3xl font-bold text-slate-900">1,284</p>
+                        </div>
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-[#3B82F6]">
+                            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /></svg>
+                        </div>
+                    </div>
+                    <p class="mt-5 inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-600">+12.8% vs mes anterior</p>
+                </article>
+
+                <article class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Stock Disponible</p>
+                            <p class="mt-3 text-3xl font-bold text-slate-900">8,940</p>
+                        </div>
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-[#1E3A8A]">
+                            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5V6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v13" /><path d="M8 4v16" /><path d="M16 4v16" /><path d="M3 20h18" /></svg>
+                        </div>
+                    </div>
+                    <p class="mt-5 inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-600">+8.4% capacidad activa</p>
+                </article>
+
+                <article class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Entradas del Mes</p>
+                            <p class="mt-3 text-3xl font-bold text-slate-900">642</p>
+                        </div>
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-[#3B82F6]">
+                            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12" /><path d="m7 10 5 5 5-5" /><path d="M4 21h16" /></svg>
+                        </div>
+                    </div>
+                    <p class="mt-5 inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-600">+15.2% recepciones</p>
+                </article>
+
+                <article class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Salidas del Mes</p>
+                            <p class="mt-3 text-3xl font-bold text-slate-900">518</p>
+                        </div>
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-50 text-red-500">
+                            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21V9" /><path d="m17 14-5-5-5 5" /><path d="M4 3h16" /></svg>
+                        </div>
+                    </div>
+                    <p class="mt-5 inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-600">+5.1% demanda</p>
+                </article>
+            </div>
+
+            <div class="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
+                <div class="space-y-6">
+                    <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                            <div>
+                                <h2 class="text-lg font-bold text-slate-900">Movimiento mensual del inventario</h2>
+                                <p class="text-sm text-slate-500">Entradas y salidas registradas por mes</p>
+                            </div>
+                            <button class="rounded-xl bg-[#1E3A8A] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-900/20 transition duration-200 hover:-translate-y-0.5 hover:bg-[#3B82F6] hover:shadow-blue-500/30">Exportar</button>
+                        </div>
+
+                        <div class="mt-8 h-72">
+                            <div class="flex h-full items-end gap-3 border-b border-l border-slate-200 pl-4">
+                                <div class="flex flex-1 flex-col items-center gap-2"><div class="flex w-full items-end gap-1"><span class="h-28 flex-1 rounded-t-lg bg-[#3B82F6]"></span><span class="h-20 flex-1 rounded-t-lg bg-slate-300"></span></div><span class="text-xs font-medium text-slate-500">Ene</span></div>
+                                <div class="flex flex-1 flex-col items-center gap-2"><div class="flex w-full items-end gap-1"><span class="h-36 flex-1 rounded-t-lg bg-[#3B82F6]"></span><span class="h-24 flex-1 rounded-t-lg bg-slate-300"></span></div><span class="text-xs font-medium text-slate-500">Feb</span></div>
+                                <div class="flex flex-1 flex-col items-center gap-2"><div class="flex w-full items-end gap-1"><span class="h-32 flex-1 rounded-t-lg bg-[#3B82F6]"></span><span class="h-28 flex-1 rounded-t-lg bg-slate-300"></span></div><span class="text-xs font-medium text-slate-500">Mar</span></div>
+                                <div class="flex flex-1 flex-col items-center gap-2"><div class="flex w-full items-end gap-1"><span class="h-44 flex-1 rounded-t-lg bg-[#3B82F6]"></span><span class="h-32 flex-1 rounded-t-lg bg-slate-300"></span></div><span class="text-xs font-medium text-slate-500">Abr</span></div>
+                                <div class="flex flex-1 flex-col items-center gap-2"><div class="flex w-full items-end gap-1"><span class="h-52 flex-1 rounded-t-lg bg-[#3B82F6]"></span><span class="h-40 flex-1 rounded-t-lg bg-slate-300"></span></div><span class="text-xs font-medium text-slate-500">May</span></div>
+                                <div class="flex flex-1 flex-col items-center gap-2"><div class="flex w-full items-end gap-1"><span class="h-60 flex-1 rounded-t-lg bg-[#3B82F6]"></span><span class="h-48 flex-1 rounded-t-lg bg-slate-300"></span></div><span class="text-xs font-medium text-slate-500">Jun</span></div>
+                            </div>
+                        </div>
+                        <div class="mt-5 flex gap-5 text-sm text-slate-500">
+                            <span class="flex items-center gap-2"><span class="h-3 w-3 rounded-full bg-[#3B82F6]"></span>Entradas</span>
+                            <span class="flex items-center gap-2"><span class="h-3 w-3 rounded-full bg-slate-300"></span>Salidas</span>
+                        </div>
+                    </section>
+
+                    <section class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+                        <div class="flex flex-col gap-3 border-b border-slate-100 p-6 sm:flex-row sm:items-center sm:justify-between">
+                            <div>
+                                <h2 class="text-lg font-bold text-slate-900">Ultimos movimientos</h2>
+                                <p class="text-sm text-slate-500">Actividad reciente del almacen</p>
+                            </div>
+                            <button class="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-[#1E3A8A] transition duration-200 hover:-translate-y-0.5 hover:border-[#3B82F6] hover:bg-blue-50">Ver todo</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full text-left text-sm">
+                                <thead class="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+                                    <tr>
+                                        <th class="px-6 py-4 font-semibold">Fecha</th>
+                                        <th class="px-6 py-4 font-semibold">Producto</th>
+                                        <th class="px-6 py-4 font-semibold">Tipo</th>
+                                        <th class="px-6 py-4 font-semibold">Cantidad</th>
+                                        <th class="px-6 py-4 font-semibold">Responsable</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr class="transition duration-200 hover:bg-blue-50/70">
+                                        <td class="px-6 py-4 text-slate-500">03/07/2026</td>
+                                        <td class="px-6 py-4 font-semibold text-slate-800">Scanner Zebra DS2208</td>
+                                        <td class="px-6 py-4"><span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-600">Entrada</span></td>
+                                        <td class="px-6 py-4 font-semibold">24</td>
+                                        <td class="px-6 py-4 text-slate-600">Mariana Lopez</td>
+                                    </tr>
+                                    <tr class="transition duration-200 hover:bg-blue-50/70">
+                                        <td class="px-6 py-4 text-slate-500">02/07/2026</td>
+                                        <td class="px-6 py-4 font-semibold text-slate-800">Etiquetas termicas 4x6</td>
+                                        <td class="px-6 py-4"><span class="rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-600">Salida</span></td>
+                                        <td class="px-6 py-4 font-semibold">180</td>
+                                        <td class="px-6 py-4 text-slate-600">Carlos Rojas</td>
+                                    </tr>
+                                    <tr class="transition duration-200 hover:bg-blue-50/70">
+                                        <td class="px-6 py-4 text-slate-500">01/07/2026</td>
+                                        <td class="px-6 py-4 font-semibold text-slate-800">Router industrial TX-900</td>
+                                        <td class="px-6 py-4"><span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-600">Entrada</span></td>
+                                        <td class="px-6 py-4 font-semibold">12</td>
+                                        <td class="px-6 py-4 text-slate-600">Ana Pereira</td>
+                                    </tr>
+                                    <tr class="transition duration-200 hover:bg-blue-50/70">
+                                        <td class="px-6 py-4 text-slate-500">30/06/2026</td>
+                                        <td class="px-6 py-4 font-semibold text-slate-800">Caja organizadora 60L</td>
+                                        <td class="px-6 py-4"><span class="rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-600">Salida</span></td>
+                                        <td class="px-6 py-4 font-semibold">36</td>
+                                        <td class="px-6 py-4 text-slate-600">Diego Salvatierra</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="space-y-6">
+                    <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <h2 class="text-lg font-bold text-slate-900">Distribucion por categoria</h2>
+                        <p class="text-sm text-slate-500">Participacion del inventario activo</p>
+                        <div class="mx-auto mt-6 flex h-56 w-56 items-center justify-center rounded-full bg-[conic-gradient(#1E3A8A_0_42%,#3B82F6_42%_70%,#93C5FD_70%_88%,#E5E7EB_88%_100%)]">
+                            <div class="flex h-32 w-32 flex-col items-center justify-center rounded-full bg-white shadow-inner">
+                                <span class="text-3xl font-bold text-[#1E3A8A]">4</span>
+                                <span class="text-xs font-semibold text-slate-500">Categorias</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 space-y-3 text-sm">
+                            <div class="flex items-center justify-between"><span class="flex items-center gap-2 text-slate-600"><span class="h-3 w-3 rounded-full bg-[#1E3A8A]"></span>Electronica</span><span class="font-semibold">42%</span></div>
+                            <div class="flex items-center justify-between"><span class="flex items-center gap-2 text-slate-600"><span class="h-3 w-3 rounded-full bg-[#3B82F6]"></span>Insumos</span><span class="font-semibold">28%</span></div>
+                            <div class="flex items-center justify-between"><span class="flex items-center gap-2 text-slate-600"><span class="h-3 w-3 rounded-full bg-blue-300"></span>Herramientas</span><span class="font-semibold">18%</span></div>
+                            <div class="flex items-center justify-between"><span class="flex items-center gap-2 text-slate-600"><span class="h-3 w-3 rounded-full bg-slate-200"></span>Otros</span><span class="font-semibold">12%</span></div>
+                        </div>
+                    </section>
+
+                    <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h2 class="text-lg font-bold text-slate-900">Stock bajo</h2>
+                                <p class="text-sm text-slate-500">Productos que requieren reposicion</p>
+                            </div>
+                            <span class="rounded-full bg-red-50 px-3 py-1 text-xs font-bold text-red-600">5 alertas</span>
+                        </div>
+                        <div class="mt-5 space-y-3">
+                            <div class="rounded-2xl border border-red-100 bg-red-50 p-4 transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                                <div class="flex items-center justify-between gap-3">
+                                    <p class="font-semibold text-slate-900">Disco SSD 1TB</p>
+                                    <span class="text-sm font-bold text-red-600">3 uds</span>
+                                </div>
+                                <div class="mt-3 h-2 rounded-full bg-red-100"><div class="h-2 w-[18%] rounded-full bg-red-500"></div></div>
+                            </div>
+                            <div class="rounded-2xl border border-orange-100 bg-orange-50 p-4 transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                                <div class="flex items-center justify-between gap-3">
+                                    <p class="font-semibold text-slate-900">Cables HDMI 2m</p>
+                                    <span class="text-sm font-bold text-orange-600">9 uds</span>
+                                </div>
+                                <div class="mt-3 h-2 rounded-full bg-orange-100"><div class="h-2 w-[35%] rounded-full bg-orange-500"></div></div>
+                            </div>
+                            <div class="rounded-2xl border border-orange-100 bg-orange-50 p-4 transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                                <div class="flex items-center justify-between gap-3">
+                                    <p class="font-semibold text-slate-900">Toner HP 85A</p>
+                                    <span class="text-sm font-bold text-orange-600">7 uds</span>
+                                </div>
+                                <div class="mt-3 h-2 rounded-full bg-orange-100"><div class="h-2 w-[28%] rounded-full bg-orange-500"></div></div>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </main>
+</div>

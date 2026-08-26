@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+@plugin "@iconify/tailwind4";
+
+@source "../../index.html";
+@source "../views/**/*.html";
+@source "../components/**/*.js";
+@source "../utils/**/*.js";
+@source "../main.js";

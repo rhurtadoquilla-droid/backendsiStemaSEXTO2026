@@ -1,0 +1,2 @@
+### consulta de detalle_movimientos
+GET http://api.sistemainventario/detalle_movimientos
