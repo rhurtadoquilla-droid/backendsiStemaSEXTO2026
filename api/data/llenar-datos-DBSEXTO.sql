@@ -1,111 +1,70 @@
-INSERT INTO clientes (ci, nombre, apellidos, direccion, telefono) VALUES
-('1029384', 'Carlos', 'Mendoza Ortiz', 'Av. Las Américas No. 450', '71023456'),
-('9283741', 'Ana María', 'Gutiérrez Roca', 'Calle Murillo, Edif. Central Piso 3', '60012345'),
-('4738291', 'Jorge Luis', 'Suárez Justiniano', 'Barrio Equipetrol, Calle 7 Oeste', '77345678'),
-('8372910', 'María René', 'Vargas Cuéllar', 'Urb. Los Pinos, Manzano 12, Lote 4', '65098765'),
-('2938472', 'José Antonio', 'Rojas Salvatierra', 'Av. Bush, Calle Isuto No. 120', '72154321'),
-('5829384', 'Claudia', 'Flores Mercado', 'Calle Ballivián No. 85', '70234567'),
-('3829103', 'Fernando', 'Torres Camacho', 'Av. Banzer Km 5, Condominio Sevilla', '67712345'),
-('7483920', 'Laura Elena', 'Méndez Pinto', 'Barrio Urbari, Calle Libertad No. 32', '71345678'),
-('1928374', 'David', 'Castillo Aguilera', 'Av. Santos Dumont, Calle 4', '60898765'),
-('8473921', 'Patricia', 'Luna Villagómez', 'Calle Sucre No. 510, Zona Central', '72234567'),
-('6372819', 'Ricardo', 'Paz Hurtado', 'Av. San Martín, Edif. El Sol Apt. 4B', '77012345'),
-('5263748', 'Gabriela', 'Sosa Ribera', 'Barrio Ramafa, Calle Los Tukis No. 15', '65432109'),
-('9384726', 'Luis Fernando', 'Arce Céspedes', 'Av. Melchor Pinto No. 240', '71654321'),
-('2837491', 'Sofía Natalia', 'Peña Dorado', 'Urb. Cotoca, Calle Las Palmas', '60712345'),
-('4829104', 'Alejandro', 'Miranda Chávez', 'Av. Piraí, Octavo Anillo', '73145678'),
-('3748291', 'Camila Paz', 'Guzmán Antelo', 'Calle Cochabamba No. 725', '69098765'),
-('1827364', 'Mauricio', 'Salazar Beltrán', 'Barrio Polanco, Calle 3 No. 45', '71534567'),
-('7382910', 'Daniela', 'Rada Arteaga', 'Av. Roque Aguilera, Tercer Anillo', '60912345'),
-('6251439', 'Andrés', 'Villegas Mansilla', 'Calle Warnes No. 112', '78045678'),
-('8291034', 'Valeria', 'Calderón Egüez', 'Urb. Las Palmas, Calle Los Tajibos', '65198765');
+-- ====================================================================
+-- SCRIPT DE LLENADO COMPLETO PARA TODAS LAS TABLAS (EMPRESA DE MUEBLES)
+-- ====================================================================
 
+-- 1. LLENAR TABLA: proveedores (Abastecedores de madera, telas y herrajes)
+INSERT INTO proveedores (nit_rut, razon_social, contacto_nombre, direccion, telefono, email) VALUES
+('NIT-900111222', 'Maderas del Oriente S.A.', 'Carlos Mendoza', 'Av. Forestal #450, Parque Industrial', '71234567', 'ventas@maderasoriente.com'),
+('NIT-900333444', 'Herrajes e Importaciones Express', 'Ana María Ruiz', 'Calle Industrial #12, Zona Central', '72345678', 'contacto@herrajesexpress.com'),
+('NIT-900555666', 'Textiles y Cueros del Sur', 'Jorge Ramos', 'Av. Las Américas Lote 8', '73456789', 'jramos@textilesdelsur.com'),
+('NIT-900777888', 'Distribuidora de Vidrios San Miguel', 'Lucía Fernández', 'Calle Murillo #88', '74567890', 'lfernandez@vidriossanmiguel.com'),
+('NIT-900999000', 'Pinturas y Barnices del Valle', 'Pedro Gómez', 'Z. Industrial Norte Nro 10', '75678901', 'pgomez@pinturasvalle.com');
 
-INSERT INTO empleados (ci, nombre, apellidos) VALUES
-('5829103', 'Carlos Eduardo', 'Montaño Chávez'),
-('2938471', 'Ana Belén', 'Gutiérrez Roca'),
-('4738295', 'Juan Marcelo', 'Suárez Justiniano'),
-('8372914', 'María Renée', 'Vargas Cuéllar'),
-('2938411', 'José Luis', 'Rojas Salvatierra'),
-('5829322', 'Claudia Patricia', 'Flores Mercado'),
-('3829188', 'Luis Fernando', 'Torres Camacho'),
-('7483955', 'Laura Elena', 'Méndez Pinto'),
-('1928312', 'David Alejandro', 'Castillo Aguilera'),
-('8473966', 'Patricia Alejandra', 'Luna Villagómez'),
-('6372833', 'Ricardo Andrés', 'Paz Hurtado'),
-('5263711', 'Gabriela Sofía', 'Sosa Ribera'),
-('9384700', 'Jorge Antonio', 'Arce Céspedes'),
-('2837422', 'Natalia Camila', 'Peña Dorado'),
-('4829199', 'Alejandro Magno', 'Miranda Chávez'),
-('3748255', 'Camila Victoria', 'Guzmán Antelo'),
-('1827300', 'Mauricio Andrés', 'Salazar Beltrán'),
-('7382944', 'Daniela Paola', 'Rada Arteaga'),
-('6251455', 'Andrés Sebastian', 'Villegas Mansilla'),
-('8291011', 'Valeria Inés', 'Calderón Egüez');
+-- 2. LLENAR TABLA: categorias (Tipos de muebles y materiales)
+INSERT INTO categorias (nombre, descripcion) VALUES
+('Dormitorio', 'Camas, roperos, veladores, cómodas y respaldos'),
+('Sala de Estar', 'Sofás, sillones, mesas de centro, racks y muebles de TV'),
+('Comedor', 'Mesas de comedor, sillas, vitrinas y aparadores'),
+('Oficina', 'Escritorios, cajoneras, sillas ejecutivas y libreros'),
+('Materia Prima', 'Tableros de madera, melamina, herrajes, barnices y telas');
 
+-- 3. LLENAR TABLA: empleados (Personal operativo del almacén y taller)
+INSERT INTO empleados (ci, nombre, apellidos, cargo) VALUES
+('11022033', 'Roberto', 'Hurtado Quilla', 'ADMINISTRADOR'),
+('44055066', 'Juan Carlos', 'Mamani Flores', 'ALMACENERO'),
+('77088099', 'María Elena', 'Gómez Castro', 'SUPERVISOR'),
+('99011022', 'Carlos', 'Andrade Ríos', 'JEFE DE TALLER'),
+('55044033', 'Luis Fernando', 'Pinto Suárez', 'ALMACENERO AUXILIAR');
 
-INSERT INTO productos (codbarras, descripcion, stock, precio_unitario) VALUES
-('7791234567891', 'Aceite de Girasol 1L', 50, 15.50),
-('7401234567892', 'Arroz Grano de Oro 1kg', 120, 8.50),
-('7501234567893', 'Azúcar Blanca Refinada 1kg', 85, 6.00),
-('7601234567894', 'Fideo Espagueti 400g', 200, 4.20),
-('7701234567895', 'Leche Entera en Polvo 400g', 40, 28.00),
-('7801234567896', 'Café Instantáneo 100g', 35, 22.50),
-('7901234567897', 'Harina de Trigo 0000 1kg', 90, 7.00),
-('7001234567898', 'Atún en Aceite 170g', 150, 11.50),
-('7101234567899', 'Galletas de Agua Paquete Familiar', 65, 9.80),
-('7201234567900', 'Refresco de Cola 2L', 110, 11.00),
-('7301234567901', 'Detergente en Polvo 1kg', 45, 18.50),
-('7401234567902', 'Jabón de Tocador 3 unidades', 75, 13.20),
-('7501234567903', 'Champú Control Caspa 400ml', 25, 35.00),
-('7601234567904', 'Papel Higiénico 4 rollos', 130, 8.00),
-('7701234567905', 'Pasta Dental Protección Caries 90g', 60, 12.50),
-('7801234567906', 'Mayonesa Doypack 250g', 80, 7.50),
-('7901234567907', 'Salsa de Tomate 200g', 95, 4.80),
-('7001234567908', 'Mantequilla con Sal 200g', 30, 14.00),
-('7101234567909', 'Queso Edam Laminado 200g', 18, 24.50),
-('7201234567910', 'Yogurt Frutado 1L', 40, 13.00);
+-- 4. LLENAR TABLA: usuarios (Cuentas de acceso para el sistema)
+INSERT INTO usuarios (username, password_hash, rol, estado, cod_empleado) VALUES
+('roberto.admin', '$2b$10$SimulatedHashForRobertoAdmin123456789', 'ADMINISTRADOR', 1, 1),
+('juan.almacen', '$2b$10$SimulatedHashForJuanAlmacen123456789', 'ALMACENERO', 1, 2),
+('maria.super', '$2b$10$SimulatedHashForMariaSupervisor12345', 'SUPERVISOR', 1, 3);
 
+-- 5. LLENAR TABLA: ubicaciones (Espacios físicos dentro del almacén)
+INSERT INTO ubicaciones (zona_sector, pasillo, estante, nivel_balda) VALUES
+('Sector Muebles Pesados', 'Pasillo A', 'Estante 01', 'Nivel Suelo'),
+('Sector Muebles Medianos', 'Pasillo B', 'Estante 04', 'Nivel 2'),
+('Sector Herrajes y Accesorios', 'Pasillo C', 'Estante 02', 'Nivel 3'),
+('Sector Tapicería y Telas', 'Pasillo D', 'Estante 01', 'Nivel 1'),
+('Patio de Maderas', 'Pasillo E', 'Estante Sl-1', 'Nivel Suelo');
 
-SELECT * FROM clientes;
-SELECT * FROM empleados;
-SELECT * FROM productos;
+-- 6. LLENAR TABLA: productos (Muebles listos e insumos de inventario)
+INSERT INTO productos (codbarras, nombre, descripcion, stock_actual, stock_minimo, precio_costo, cod_categoria, cod_ubicacion) VALUES
+('750123456001', 'Sofá Cama 3 Cuerpos Gris', 'Sofá tapizado en tela lino de alta resistencia', 5, 2, 1200.00, 2, 1),
+('750123456002', 'Mesa Comedor Madera Roble', 'Mesa rectangular para 6 personas de madera maciza', 3, 1, 1800.00, 3, 1),
+('750123456003', 'Silla Comedor Tapizada', 'Silla de madera con asiento acolchado color beige', 12, 4, 250.00, 3, 2),
+('750123456004', 'Ropero Empotrado 4 Puertas', 'Ropero de melamina color madera nogal con espejos', 2, 1, 2200.00, 1, 1),
+('750123456005', 'Escritorio Ergonómico L', 'Escritorio de oficina con pasacables y cajonera', 4, 2, 650.00, 4, 2),
+('750123456006', 'Tablero Melamina Nogal 18mm', 'Insumo para fabricación de estructuras de muebles', 40, 10, 180.00, 5, 5),
+('750123456007', 'Caja Correderas Telescópicas 40cm', 'Rieles metálicos para cajones de escritorios y roperos', 15, 5, 45.00, 5, 3),
+('750123456008', 'Cama Matrimonial King Size', 'Estructura de cama en madera tajibo con soporte reforzado', 3, 1, 2500.00, 1, 1);
 
-INSERT INTO pedido (cod_cliente, fecha_compra, cantidad, cod_empleado) VALUES
-(1, '2026-05-20 10:30:00', 3, 1),
-(2, '2026-05-21 11:15:00', 5, 2),
-(3, '2026-05-22 14:20:00', 2, 3),
-(4, '2026-05-23 09:00:00', 8, 4),
-(5, '2026-05-24 16:45:00', 4, 5),
-(6, '2026-05-25 12:10:00', 1, 6),
-(7, '2026-05-26 15:30:00', 6, 7),
-(8, '2026-05-27 18:00:00', 2, 8),
-(9, '2026-05-28 11:05:00', 7, 9),
-(10, '2026-05-29 14:22:00', 3, 10);
+-- 7. LLENAR TABLA: movimientos (Registros de flujos de inventario internos y externos)
+INSERT INTO movimientos (tipo_movimiento, fecha_registro, documento_referencia, observaciones, cod_empleado, cod_proveedor) VALUES
+('ENTRADA', NOW(), 'FAC-8991', 'Ingreso por compra de tableros y rieles metálicos', 2, 1),
+('ENTRADA', NOW(), 'NOTA-PROD-001', 'Ingreso de productos terminados desde el taller de carpintería', 2, NULL),
+('AJUSTE', NOW(), 'INF-ROT-04', 'Pérdida por daño estructural en el pasillo (rotura de pata de mesa)', 3, NULL),
+('SALIDA', NOW(), 'SOL-TALLER-02', 'Salida interna de melamina y herrajes requeridos por producción', 5, NULL),
+('ENTRADA', NOW(), 'REMISION-9941', 'Compra de rollos de tela lino para stock de tapicería', 2, 3);
 
-
-
-INSERT INTO pedido_producto (cod_producto, cod_pedido, cantidad, precio_unitario, descuento) VALUES
-(1, 1, 2, 15.50, 0.00),
-(4, 1, 1, 4.20, 0.00),
-(2, 2, 5, 8.50, 0.50),
-(3, 3, 2, 6.00, 0.00),
-(10, 4, 5, 11.00, 1.00),
-(14, 4, 3, 8.00, 0.00),
-(5, 5, 4, 28.00, 2.00),
-(6, 6, 1, 22.50, 0.00),
-(7, 7, 6, 7.00, 0.00),
-(8, 8, 2, 11.50, 0.50);
-
-
-INSERT INTO empleado_pedidos (cod_pedido, cod_empleado, fecha) VALUES
-(1, 1, '2026-05-20'),
-(2, 2, '2026-05-21'),
-(3, 3, '2026-05-22'),
-(4, 4, '2026-05-23'),
-(5, 5, '2026-05-24'),
-(6, 6, '2026-05-25'),
-(7, 7, '2026-05-26'),
-(8, 8, '2026-05-27'),
-(9, 9, '2026-05-28'),
-(10, 10, '2026-05-29');
+-- 8. LLENAR TABLA: detalle_movimientos (Vinculación exacta de productos y cantidades por movimiento)
+INSERT INTO detalle_movimientos (cod_movimiento, cod_producto, cantidad, precio_historico) VALUES
+(1, 6, 20, 180.00), -- Mov 1: Entraron 20 tableros de melamina
+(1, 7, 10, 45.00),  -- Mov 1: Entraron 10 cajas de correderas telesópicas
+(2, 1, 5, 1200.00), -- Mov 2: Entraron 5 sofás terminados de producción
+(2, 5, 4, 650.00),  -- Mov 2: Entraron 4 escritorios terminados de producción
+(3, 2, 1, 1800.00), -- Mov 3: Se dio de baja 1 mesa de roble dañada (Ajuste)
+(4, 6, 5, 180.00),  -- Mov 4: Salieron hacia el taller 5 tableros de melamina
+(5, 3, 12, 250.00); -- Mov 5: Entraron 12 sillas de comedor tapizadas
