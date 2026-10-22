@@ -1,2 +1,47 @@
 ### consulta de proveedores
 GET http://api.sistemainventario/proveedores
+### Consultar proveedores
+GET http://api.sistemainventario/proveedores
+
+### Modificar proveedor
+PUT http://api.sistemainventario/proveedores/1
+Content-Type: application/json
+
+{
+    "nombre": "Proveedor General",
+    "contacto": "Juan Pérez",
+    "telefono": "5555555555",
+    "correo": "proveedor@correo.com",
+    "direccion": "Av. Principal 123"
+}
+
+### Modificar proveedor con datos faltantes
+PUT http://api.sistemainventario/proveedores/1
+Content-Type: application/json
+
+{
+    "nombre": ""
+}
+
+### Adicionar proveedor
+POST http://api.sistemainventario/proveedores
+Content-Type: application/json
+
+{
+    "nombre": "Proveedor Nuevo",
+    "contacto": "Ana López",
+    "telefono": "5555555556",
+    "correo": "nuevo@correo.com",
+    "direccion": "Calle Secundaria 45"
+}
+
+### Adicionar proveedor con datos faltantes
+POST http://api.sistemainventario/proveedores
+Content-Type: application/json
+
+{
+    "nombre": ""
+}
+
+### Eliminar proveedor
+DELETE http://api.sistemainventario/proveedores/1

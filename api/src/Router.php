@@ -31,6 +31,9 @@ class Router{
             $pattern = '/^' . $pattern . '\/?$/';
 
             if ($method === $route['method'] && preg_match($pattern, $uri, $matches)) {
+                if (!\AuthController::authorize($method, $uri)) {
+                    return;
+                }
                 array_shift($matches);
                 list($controllerName, $methodName) = explode('@', $route['handler']);
                 $controller = new $controllerName();

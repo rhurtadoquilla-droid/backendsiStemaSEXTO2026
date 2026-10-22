@@ -1,2 +1,46 @@
 ### consulta de movimientos
 GET http://api.sistemainventario/movimientos
+
+### Consultar movimientos
+GET http://api.sistemainventario/movimientos
+
+### Modificar movimiento
+PUT http://api.sistemainventario/movimientos/1
+Content-Type: application/json
+
+{
+    "tipo": "entrada",
+    "fecha": "2026-09-18",
+    "cod_empleado": 1,
+    "descripcion": "Entrada de productos"
+}
+
+### Modificar movimiento con datos faltantes
+PUT http://api.sistemainventario/movimientos/1
+Content-Type: application/json
+
+{
+    "tipo": ""
+}
+
+### Adicionar movimiento
+POST http://api.sistemainventario/movimientos
+Content-Type: application/json
+
+{
+    "tipo": "entrada",
+    "fecha": "2026-09-18",
+    "cod_empleado": 1,
+    "descripcion": "Entrada de productos"
+}
+
+### Adicionar movimiento con datos faltantes
+POST http://api.sistemainventario/movimientos
+Content-Type: application/json
+
+{
+    "tipo": ""
+}
+
+### Eliminar movimiento
+DELETE http://api.sistemainventario/movimientos/1

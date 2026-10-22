@@ -1,2 +1,47 @@
 ### consulta de usuarios
 GET http://api.sistemainventario/usuarios
+
+### Consultar usuarios
+GET http://api.sistemainventario/usuarios
+
+### Modificar usuario
+PUT http://api.sistemainventario/usuarios/1
+Content-Type: application/json
+
+{
+    "nombre": "Administrador",
+    "usuario": "admin",
+    "correo": "admin@correo.com"
+}
+
+### Modificar usuario con datos faltantes
+PUT http://api.sistemainventario/usuarios/1
+Content-Type: application/json
+
+{
+    "usuario": ""
+}
+
+### Adicionar usuario
+POST http://api.sistemainventario/usuarios
+Content-Type: application/json
+Authorization: Bearer <token>
+
+{
+    "username": "usuario_nuevo",
+    "password": "CambiarEstaClave123",
+    "rol": "ALMACENERO",
+    "estado": 1,
+    "cod_empleado": 4
+}
+
+### Adicionar usuario con datos faltantes
+POST http://api.sistemainventario/usuarios
+Content-Type: application/json
+
+{
+    "usuario": ""
+}
+
+### Eliminar usuario
+DELETE http://api.sistemainventario/usuarios/1

@@ -1,2 +1,46 @@
 ### consulta de empleados
+GET http://api.sistemainventario/empleados 
+
+### Consultar empleados
 GET http://api.sistemainventario/empleados
+
+### Modificar empleado
+PUT http://api.sistemainventario/empleados/1
+Content-Type: application/json
+
+{
+    "nombre": "Carlos",
+    "apellido": "Ramírez",
+    "telefono": "5555555557",
+    "correo": "carlos@correo.com"
+}
+
+### Modificar empleado con datos faltantes
+PUT http://api.sistemainventario/empleados/1
+Content-Type: application/json
+
+{
+    "nombre": ""
+}
+
+### Adicionar empleado
+POST http://api.sistemainventario/empleados
+Content-Type: application/json
+
+{
+    "nombre": "María",
+    "apellido": "Gómez",
+    "telefono": "5555555558",
+    "correo": "maria@correo.com"
+}
+
+### Adicionar empleado con datos faltantes
+POST http://api.sistemainventario/empleados
+Content-Type: application/json
+
+{
+    "nombre": ""
+}
+
+### Eliminar empleado
+DELETE http://api.sistemainventario/empleados/1

@@ -87,10 +87,11 @@ class ProductoController
         $producto = productos::delete($id);
 
         if (isset($producto["ERROR"])) {
+            $hasRelatedRecords = strpos($producto["ERROR"], "No se puede eliminar") === 0;
+            http_response_code($hasRelatedRecords ? 409 : 400);
             echo json_encode([
                 "estado" => "false",
-                "message" => "No se pudo eliminar el producto",
-                "error" => $producto["ERROR"]
+                "message" => $producto["ERROR"]
             ]);
             return;
         }

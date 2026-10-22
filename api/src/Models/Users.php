@@ -9,7 +9,7 @@ class Users
         ["id"=>4,"name"=>'celeste padilla','email'=>"celeste@gmail.com"],
     ];
     public static function all(){
-        $sql="SELECT * FROM usuarios";
+        $sql="SELECT id, username, rol, estado, cod_empleado FROM usuarios";
         return ConexionPDO::query($sql);//self::$users;
     }
 }

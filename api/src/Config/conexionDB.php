@@ -8,6 +8,9 @@ class ConexionPDO
     static private ?PDO $cnn = null;
 
     public static function connect():PDO{
+        if (self::$cnn instanceof PDO) {
+            return self::$cnn;
+        }
 
         $pdo = 'mysql:host='.HOST.';port='.PORT.';dbname='.DATABASE.';'.CHARSET;
 
@@ -17,15 +20,7 @@ class ConexionPDO
             PDO::ATTR_EMULATE_PREPARES => false
         ];
 
-        try{
-
-            self::$cnn = new PDO($pdo, USERNAME, PASSWORD, $options);
-
-        }catch(\PDOException $error){
-
-            die("ERROR".$error->getMessage());
-
-        }
+        self::$cnn = new PDO($pdo, USERNAME, PASSWORD, $options);
 
         return self::$cnn;
     }

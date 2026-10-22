@@ -105,6 +105,17 @@ return $result; //ConexionPDO::query($sql);
     // Eliminar producto
     public static function delete($id)
     {
+        $details = ConexionPDO::query(
+            'SELECT COUNT(*) AS total FROM detalle_movimientos WHERE cod_producto = :id',
+            [':id' => $id]
+        );
+        if (isset($details['ERROR'])) {
+            return ["ERROR" => "No se pudo comprobar si el producto tiene movimientos relacionados"];
+        }
+        if ((int)($details[0]['total'] ?? 0) > 0) {
+            return ["ERROR" => "No se puede eliminar el producto porque tiene detalles de movimientos relacionados"];
+        }
+
         $sql = "DELETE FROM productos WHERE id=:id";
         $valores = [":id" => $id];
 

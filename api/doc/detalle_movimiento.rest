@@ -1,2 +1,46 @@
 ### consulta de detalle_movimientos
 GET http://api.sistemainventario/detalle_movimientos
+
+### Consultar detalles de movimientos
+GET http://api.sistemainventario/detalle_movimientos
+
+### Modificar detalle de movimiento
+PUT http://api.sistemainventario/detalle_movimientos/1
+Content-Type: application/json
+
+{
+    "cod_movimiento": 1,
+    "cod_producto": 1,
+    "cantidad": 5,
+    "precio": 25.00
+}
+
+### Modificar detalle con datos faltantes
+PUT http://api.sistemainventario/detalle_movimientos/1
+Content-Type: application/json
+
+{
+    "cantidad": 0
+}
+
+### Adicionar detalle de movimiento
+POST http://api.sistemainventario/detalle_movimientos
+Content-Type: application/json
+
+{
+    "cod_movimiento": 1,
+    "cod_producto": 1,
+    "cantidad": 5,
+    "precio": 25.00
+}
+
+### Adicionar detalle con datos faltantes
+POST http://api.sistemainventario/detalle_movimientos
+Content-Type: application/json
+
+{
+    "cantidad": 0
+}
+
+### Eliminar detalle de movimiento
+DELETE http://api.sistemainventario/detalle_movimientos/1

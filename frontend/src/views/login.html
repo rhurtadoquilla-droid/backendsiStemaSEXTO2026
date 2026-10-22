@@ -1,0 +1,92 @@
+<main class="relative min-h-screen overflow-hidden bg-rose-50 px-4 py-6 text-slate-800 sm:px-8">
+    <div aria-hidden="true" class="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-pink-200/60 blur-3xl"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -bottom-40 -right-24 h-[28rem] w-[28rem] rounded-full bg-rose-200/70 blur-3xl"></div>
+
+    <header class="relative z-10 flex justify-end">
+        <button type="submit" form="login-form" class="inline-flex h-11 items-center gap-2 rounded-xl bg-pink-600 px-5 text-sm font-semibold text-white shadow-lg shadow-pink-900/20 transition hover:bg-pink-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-pink-200">
+            Iniciar sesión
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+        </button>
+    </header>
+
+    <section class="relative mx-auto mt-6 grid min-h-[calc(100vh-7rem)] w-full max-w-6xl overflow-hidden rounded-[2rem] border border-pink-100 bg-white shadow-2xl shadow-rose-200/70 lg:grid-cols-2">
+        <aside class="relative flex flex-col justify-between overflow-hidden bg-gradient-to-br from-pink-600 via-rose-600 to-fuchsia-700 p-8 text-white sm:p-12 lg:p-14">
+            <div aria-hidden="true" class="absolute -right-24 -top-24 h-80 w-80 rounded-full border-[48px] border-white/10"></div>
+            <div aria-hidden="true" class="absolute -bottom-36 -left-28 h-96 w-96 rounded-full border-[56px] border-white/10"></div>
+
+            <div class="relative flex items-center gap-3">
+                <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 shadow-lg ring-1 ring-white/20">
+                    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="m3 7 9-4 9 4-9 4-9-4Z" />
+                        <path d="m3 12 9 4 9-4M3 17l9 4 9-4M12 11v10" />
+                    </svg>
+                </span>
+                <span>
+                    <span class="block text-lg font-bold tracking-wide">Sistema de almacenamiento</span>
+                    <span class="block text-sm text-pink-100">Control de inventario</span>
+                </span>
+            </div>
+
+            <div class="relative my-12 max-w-lg">
+                <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-pink-100">Bienvenida al sistema</p>
+                <h1 class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">Sistema de almacenamiento de inventario</h1>
+                <p class="mt-6 max-w-md text-base leading-7 text-rose-50">
+                    Organiza tus productos, consulta existencias y mantén el control de cada movimiento desde un solo lugar.
+                </p>
+                <div class="mt-10 flex items-center gap-3 text-sm font-medium text-pink-50">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <path d="M4 19V5M4 19h17" />
+                            <path d="m7 14 4-4 3 2 6-7" />
+                            <path d="M16 5h4v4" />
+                        </svg>
+                    </span>
+                    Información clara para tu equipo y almacén.
+                </div>
+            </div>
+
+            <p class="relative text-xs text-pink-100">Gestión sencilla y segura para tu inventario.</p>
+        </aside>
+
+        <section class="flex items-center justify-center px-6 py-12 sm:px-12 lg:px-16" aria-labelledby="login-title">
+            <div class="w-full max-w-md">
+                <div class="mb-9">
+                    <p class="text-sm font-semibold uppercase tracking-[0.18em] text-pink-600">Acceso al sistema</p>
+                    <h2 id="login-title" class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Bienvenida</h2>
+                    <p class="mt-2 text-sm leading-6 text-slate-500">Ingresa tu usuario o correo electrónico y tu contraseña.</p>
+                </div>
+
+                <form id="login-form" class="space-y-6" aria-label="Formulario de inicio de sesión">
+                    <label class="block">
+                        <span class="mb-2 block text-sm font-semibold text-slate-700">Usuario o correo electrónico</span>
+                        <span class="relative block">
+                            <svg class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-pink-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M5 21v-2a7 7 0 0 1 14 0v2" />
+                            </svg>
+                            <input name="username" type="text" autocomplete="username" placeholder="Escribe tu correo electrónico" required
+                                class="h-14 w-full rounded-xl border border-pink-100 bg-rose-50/60 pl-12 pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 hover:border-pink-200 focus:border-pink-500 focus:bg-white focus:ring-4 focus:ring-pink-100">
+                        </span>
+                    </label>
+
+                    <label class="block">
+                        <span class="mb-2 block text-sm font-semibold text-slate-700">Contraseña</span>
+                        <span class="relative block">
+                            <svg class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-pink-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <rect x="4" y="10" width="16" height="11" rx="2" />
+                                <path d="M8 10V7a4 4 0 1 1 8 0v3M12 14v3" />
+                            </svg>
+                            <input name="password" type="password" autocomplete="current-password" placeholder="Escribe tu contraseña" required
+                                class="h-14 w-full rounded-xl border border-pink-100 bg-rose-50/60 pl-12 pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 hover:border-pink-200 focus:border-pink-500 focus:bg-white focus:ring-4 focus:ring-pink-100">
+                        </span>
+                    </label>
+
+                    <p class="text-xs leading-5 text-slate-500">Usa las credenciales asignadas por el administrador del sistema.</p>
+                    <p id="login-error" class="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700" role="alert" hidden></p>
+                </form>
+            </div>
+        </section>
+    </section>
+</main>

@@ -1,2 +1,41 @@
 ### consulta de categorias
 GET http://api.sistemainventario/categorias
+### Consultar categorías
+GET http://api.sistemainventario/categorias
+
+### Modificar categoría
+PUT http://api.sistemainventario/categorias
+Content-Type: application/json
+
+{
+    "nombre": "Electrónica",
+    "descripcion": "Productos electrónicos"
+}
+
+### Modificar categoría con datos faltantes
+PUT http://api.sistemainventario/categorias/1
+Content-Type: application/json
+
+{
+    "nombre": ""
+}
+
+### Adicionar categoría
+POST http://api.sistemainventario/categorias
+Content-Type: application/json
+
+{
+    "nombre": "Mobiliario",
+    "descripcion": "Muebles de oficina"
+}
+
+### Adicionar categoría con datos faltantes
+POST http://api.sistemainventario/categorias
+Content-Type: application/json
+
+{
+    "nombre": ""
+}
+
+### Eliminar categoría
+DELETE http://api.sistemainventario/categorias/1
