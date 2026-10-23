@@ -1,4 +1,5 @@
-const API_URL = (window.INVENTARIO_API_URL || `${window.location.protocol}//api.sistemainventario`).replace(/\/$/, "");
+//const API_URL = (window.INVENTARIO_API_URL || `${window.location.protocol}//api.sistemainventario`).replace(/\/$/, "");
+const API_URL = 'https://backendsistemasexto2026-1.onrender.com'; // Reemplaza con la URL de tu API en Render   
 const TOKEN_KEY = "inventario-auth-token";
 let accessToken = sessionStorage.getItem(TOKEN_KEY);
 
